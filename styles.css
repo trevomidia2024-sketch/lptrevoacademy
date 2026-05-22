@@ -68,7 +68,7 @@ body.density-cozy   { --pad-sec: 96px; --pad-card: 28px; --gap-list: 14px; }
 body.density-normal { --pad-sec: 72px; --pad-card: 22px; --gap-list: 10px; }
 body.density-tight  { --pad-sec: 52px; --pad-card: 18px; --gap-list: 8px; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   background: var(--bg);
   color: var(--text);
@@ -839,8 +839,24 @@ section { padding: var(--pad-sec, 72px) 0; position: relative; }
 .float-cta .copy { display: flex; flex-direction: column; line-height: 1.1; }
 .float-cta .copy .a { font-size: 12px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.08em; text-transform: uppercase; }
 .float-cta .copy .b { font-family: 'Manrope', sans-serif; font-weight: 700; letter-spacing: -0.01em; color: var(--gold); font-size: 18px; }
-.float-cta .btn { padding: 10px 18px; font-size: 13px; }
-@media (max-width: 540px) { .float-cta .copy { display: none; } .float-cta { padding: 8px; } }
+.float-cta .btn { padding: 10px 18px; font-size: 13px; white-space: nowrap; }
+.float-cta .neon-btn { white-space: nowrap; }
+@media (max-width: 540px) {
+  .float-cta {
+    left: 12px; right: 12px;
+    transform: translateY(120px);
+    padding: 8px 8px 8px 16px;
+    gap: 10px;
+    width: auto;
+    max-width: calc(100vw - 24px);
+  }
+  .float-cta.show { transform: translateY(0); }
+  .float-cta .copy { flex: 1; min-width: 0; }
+  .float-cta .copy .a { font-size: 10px; letter-spacing: 0.1em; }
+  .float-cta .copy .b { font-size: 15px; }
+  .float-cta .neon-btn,
+  .float-cta .btn { padding: 10px 14px; font-size: 12px; flex-shrink: 0; }
+}
 
 /* ========== QUIZ ========== */
 .quiz-shell {
@@ -872,7 +888,7 @@ section { padding: var(--pad-sec, 72px) 0; position: relative; }
 .field input {
   background: var(--bg); border: 1px solid var(--line);
   border-radius: 10px; padding: 14px 16px;
-  font-size: 15px; color: var(--text); outline: none;
+  font-size: 16px; color: var(--text); outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
   width: 100%;
 }
@@ -896,7 +912,7 @@ section { padding: var(--pad-sec, 72px) 0; position: relative; }
   display: flex; align-items: center;
   padding-left: 14px; padding-right: 4px;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px; font-weight: 600;
+  font-size: 16px; font-weight: 600;
   color: var(--gold);
   background: var(--surface-2);
   user-select: none;
@@ -907,8 +923,9 @@ section { padding: var(--pad-sec, 72px) 0; position: relative; }
   background: var(--surface-2) !important;
   font-family: 'JetBrains Mono', monospace !important;
   font-weight: 600 !important;
+  font-size: 16px !important;
   color: var(--gold) !important;
-  width: 46px !important;
+  width: 52px !important;
   padding: 14px 8px 14px 0 !important;
   text-align: left;
   letter-spacing: 0.02em;
@@ -925,6 +942,7 @@ section { padding: var(--pad-sec, 72px) 0; position: relative; }
   background: transparent !important;
   flex: 1;
   font-family: 'JetBrains Mono', monospace;
+  font-size: 16px !important;
   letter-spacing: 0.02em;
 }
 .phone-input input:focus { box-shadow: none !important; }
@@ -984,3 +1002,109 @@ section { padding: var(--pad-sec, 72px) 0; position: relative; }
   background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
   margin: 0;
 }
+
+/* ========== MOBILE COMPREHENSIVE ========== */
+@media (max-width: 600px) {
+  body.density-normal { --pad-sec: 56px; --pad-card: 20px; }
+  .shell, .shell-narrow, .shell-mid { padding: 0 16px; }
+
+  /* nav */
+  .nav { padding: 10px 0; }
+  .nav-inner { gap: 12px; }
+
+  /* hero */
+  .hero { padding: 92px 0 48px; }
+  .hero-inner { gap: 32px; }
+  .hero-headline { margin: 16px 0 14px; }
+  .hero-sub { margin-bottom: 24px; }
+  .hero-cta-row { gap: 10px; margin-bottom: 28px; width: 100%; }
+  .hero-cta-row .neon-btn { flex: 1; min-width: 0; }
+  .hero-stats { margin-top: 36px; }
+  .hero-stats .stat { padding: 20px 10px; }
+  .portrait-tag { right: 12px; bottom: 12px; padding: 10px 12px; }
+  .portrait-tag .nm { font-size: 16px; }
+  .portrait-badge { left: 12px; top: 12px; }
+
+  /* sections */
+  .section-head { margin-bottom: 32px; }
+  .section-head p { font-size: 15px; }
+
+  /* dor / objections / depoimentos */
+  .dor-grid { grid-template-columns: 1fr; gap: 10px; }
+  .dor-item { padding: 18px; }
+  .obj-item { padding: 20px; }
+  .obj-q { font-size: 18px; }
+  .dep { padding: 20px; }
+  .dep-quote { font-size: 16px; }
+
+  /* solução */
+  .sol-card { padding: 24px 20px; }
+  .sol-card p.lead { font-size: 19px; }
+
+  /* mari */
+  .mari-content h2 { font-size: clamp(28px, 8vw, 38px); }
+  .mari-content p { font-size: 15px; }
+  .mari-link { padding: 12px 14px; }
+
+  /* benefícios */
+  .ben-item { padding: 18px; }
+
+  /* módulos */
+  .module-head { padding: 16px 18px; gap: 12px; }
+  .module-num { font-size: 20px; width: 28px; }
+  .module-title { font-size: 16px; }
+  .module-body-inner { padding: 0 18px 18px 58px; font-size: 13.5px; }
+
+  /* oferta */
+  .offer-list { padding: 22px 20px; }
+  .offer-list h3 { font-size: 22px; }
+  .offer-list li { font-size: 13.5px; }
+  .offer-price { padding: 24px 20px; }
+  .price-por .big { font-size: clamp(56px, 18vw, 72px); }
+  .price-meta { gap: 12px; }
+
+  /* garantia */
+  .gar { padding: 28px 22px; gap: 22px; }
+  .gar-seal { width: 92px; height: 92px; }
+  .gar-seal .n { font-size: 32px; }
+  .gar h3 { font-size: 24px; }
+  .gar p { font-size: 14px; }
+
+  /* urgência */
+  .urg { padding: 36px 20px; }
+  .cd { gap: 8px; }
+  .cd-item { padding: 14px 12px; min-width: 72px; }
+
+  /* faq */
+  .faq-q { padding: 18px 4px; font-size: 17px; gap: 12px; }
+  .faq-a-inner { font-size: 14px; padding-bottom: 18px; }
+
+  /* cta final */
+  .cta-final { padding: 64px 0; }
+
+  /* ps */
+  .ps { padding: 22px 22px 22px 24px; }
+
+  /* footer */
+  .foot { padding: 32px 0 88px; }
+
+  /* quiz */
+  .quiz-shell { padding: 72px 16px 32px; }
+  .quiz-card { padding: 24px 18px; border-radius: 18px; }
+  .quiz-card h1 { margin-top: 14px; }
+  .quiz-card h2 { margin-top: 14px; }
+  .quiz-sub { font-size: 14px; }
+  .quiz-progress .seg { width: 28px; }
+  .quiz-opt { padding: 14px 14px; gap: 12px; }
+  .quiz-opt .ltr { width: 28px; height: 28px; font-size: 14px; }
+  .quiz-opt span.text { font-size: 14px; }
+
+  /* loading */
+  .loading-title { font-size: 24px; }
+}
+
+/* Safe-area / iOS notch */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .float-cta { bottom: calc(16px + env(safe-area-inset-bottom)); }
+}
+
