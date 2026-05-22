@@ -4,7 +4,7 @@ const MODULES = [
   { n: '01', title: 'Boas-vindas e comunidade exclusiva', body: 'Entrada na comunidade Trevo, networking direto com a Mari e outros criadores, e direcionamento dos primeiros passos dentro do método.' },
   { n: '02', title: 'Mentalidade, disciplina e constância', body: 'O bloco que destrava quem trava. Como vencer o medo de aparecer, a procrastinação e construir o ritmo profissional de criador.' },
   { n: '03', title: 'Marketing de Influência na prática', body: 'Como funciona o mercado por dentro: como marcas escolhem criadores, como o jogo é jogado, e como você se posiciona dentro dele.' },
-  { n: '04', title: 'Como nascem os influenciadores', body: 'O processo real (não a versão romantizada) de construir presença digital do zero, com exemplos de bastidores reais da agência.' },
+  { n: '04', title: 'Como nascem os Creators', body: 'O processo real (não a versão romantizada) de construir presença digital do zero, com exemplos de bastidores reais da agência.' },
   { n: '05', title: 'Posicionamento estratégico', body: 'Você vai sair com uma frase clara de quem você é, para quem fala, o que entrega, e por que isso vira dinheiro.' },
   { n: '06', title: 'Modelagem de perfis de sucesso', body: 'Engenharia reversa de criadores que faturam: o que copiar, o que evitar, e como adaptar para o seu nicho sem virar cópia.' },
   { n: '07', title: 'Gestão de crise e cancelamento', body: 'Como se proteger antes da crise, e como responder quando ela vem. Roteiros prontos e estudos de caso reais.' },
@@ -20,7 +20,7 @@ const BENEFICIOS = [
   { t: 'Domínio do Instagram e TikTok', d: 'Entenda como os algoritmos funcionam e faça eles trabalharem para você.' },
   { t: 'Seu primeiro (ou próximo) publipost pago', d: 'Saiba quanto cobrar, como montar seu kit mídia e fechar parcerias com marcas.' },
   { t: 'Acesso ao app Trevo de Oportunidades', d: 'App exclusivo com oportunidades reais de publicidade para você já começar a faturar.' },
-  { t: 'Mentalidade de influenciador profissional', d: 'Supere o medo e a procrastinação com módulos dedicados a gestão emocional.' },
+  { t: 'Mentalidade de Creator profissional', d: 'Supere o medo e a procrastinação com módulos dedicados a gestão emocional.' },
 ];
 
 const DORES = [
@@ -28,10 +28,11 @@ const DORES = [
   'Fica travado na hora de aparecer por medo do que as pessoas vão pensar',
   'Já tentou mil estratégias da internet e nenhuma trouxe resultado real',
   'Não sabe quanto cobrar, como montar um kit mídia ou fechar parcerias',
-  'Vê influenciadores menores que você faturando e não entende como',
+  'Vê Creators menores que você faturando e não entende como',
 ];
 
 const OBJECOES = [
+  { q: 'Não quero virar Creator. Isso é pra mim?', a: <>Sim. O Trevo Academy ensina <strong>produção de conteúdo, posicionamento e estratégia digital</strong> — habilidades que funcionam pra você virar Creator, divulgar o seu negócio, se posicionar como referência na sua área profissional ou simplesmente entender de verdade como dominar redes sociais em 2026.</> },
   { q: 'Mas eu não tenho seguidores ainda…', a: <>Perfeito. O Trevo Academy foi feito <strong>especialmente para quem começa do zero</strong>. O Módulo 01 te coloca no lugar certo desde o primeiro dia.</> },
   { q: 'Tenho medo de aparecer nas redes sociais.', a: <>A Mari também tinha. O <strong>Módulo 02 de Mentalidade</strong> e o Módulo 07 de Gestão de Crise foram criados especificamente para esse bloqueio.</> },
   { q: 'E se eu comprar e não gostar?', a: <>Você tem <strong>7 dias de garantia total</strong>. Se não gostar por qualquer motivo, devolvemos 100% do seu dinheiro — sem perguntas.</> },
@@ -90,11 +91,11 @@ const Hero = ({ heroStyle, onCta }) => {
           <div>
             <div className="eyebrow"><span className="dot"></span>Método Trevo · Turma de Lançamento</div>
             <h1 className="hero-headline">
-              Do <em className="gold" style={{fontStyle:'italic'}}>zero</em> ao influenciador<br/>
+              Do <em className="gold" style={{fontStyle:'italic'}}>zero</em> ao Creator<br/>
               que <em className="green" style={{fontStyle:'italic'}}>fatura de verdade.</em>
             </h1>
             <p className="hero-sub">
-              Aprenda com a fundadora da maior agência de criadores do Brasil como transformar seu celular em uma máquina de geração de renda — do primeiro post à primeira parceria paga.
+              Para quem quer virar Creator profissional, divulgar o próprio negócio ou simplesmente dominar a produção de conteúdo e o posicionamento no digital em 2026. Aprenda com a fundadora da Trevo Creators — do primeiro post à primeira parceria paga.
             </p>
             <div className="hero-cta-row">
               <NeonButton variant="solid" size="lg" onClick={onCta}>Quero começar agora <Icon.arrow /></NeonButton>
@@ -177,9 +178,9 @@ const Solucao = () => (
             </h2>
           </div>
           <div className="sol-card">
-            <p className="lead">"A Mari saiu do zero e construiu a maior agência de criadores do Brasil."</p>
-            <p>A Trevo Creators é hoje referência nacional no mercado de influência digital, com mais de 100 criadores e 1,2 milhão de seguidores na sua base.</p>
-            <p>Ela não nasceu influenciadora. Ela aprendeu, errou, testou e desenvolveu um método que funciona para qualquer pessoa com um celular e internet.</p>
+            <p className="lead">"A Mari saiu do zero e construiu a maior agência de Creators do Brasil."</p>
+            <p>A Trevo Creators é hoje referência nacional na creator economy brasileira, com mais de 100 criadores e 1,2 milhão de seguidores na sua base.</p>
+            <p>Ela não nasceu Creator. Ela aprendeu, errou, testou e desenvolveu um método de produção de conteúdo e posicionamento que funciona para qualquer pessoa que queira dominar o digital em 2026 — quem quer virar Creator, divulgar o próprio negócio ou se posicionar como referência na sua área.</p>
             <p className="arrow-line">→ Esse método agora está disponível para você no Trevo Academy.</p>
           </div>
         </div>
@@ -201,7 +202,7 @@ const Mari = () => (
           <div className="mari-content">
             <div className="eyebrow"><span className="dot"></span>Sua mentora</div>
             <h2>Quem é <em className="italic" style={{fontStyle:'italic'}}>Mari Domingues</em></h2>
-            <p>Mari fundou a Trevo Creators do zero e transformou a agência em referência nacional no mercado de influência digital. Hoje gerencia mais de 100 criadores, com campanhas para marcas nacionais e internacionais.</p>
+            <p>Mari fundou a Trevo Creators do zero e transformou a agência em referência nacional na creator economy brasileira. Hoje gerencia mais de 100 criadores, com campanhas para marcas nacionais e internacionais.</p>
             <p>Com mais de 500 mil seguidores no perfil pessoal e 1,2 milhão pela Trevo, ela sabe exatamente o que funciona — e o que é perda de tempo — nas redes sociais.</p>
             <p className="accent">"No Trevo Academy, eu entrego tudo que precisaria se eu fosse reconstruir tudo do zero."</p>
             <div className="mari-links">
